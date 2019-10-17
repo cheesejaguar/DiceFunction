@@ -1,0 +1,2 @@
+# DiceFunction
+Dicestring -> roll
