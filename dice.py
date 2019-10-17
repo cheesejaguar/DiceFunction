@@ -10,7 +10,7 @@ def roll_dice(input):
     dice = [each.encode("ascii", "ignore") for each in dice]
     for each in dice:
         num, sides = each.split("d")
-        response.update({sides: [randint(1,int(sides)+1) for roll in range(int(num))]})
+        response.update({sides: [randint(1,int(sides)) for roll in range(int(num))]})
     response["sum"] = sum([item for sublist in response.values() for item in sublist])
     return jsonify(response)
 
